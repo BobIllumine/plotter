@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AppUI</class>
+ <widget class="QMainWindow" name="AppUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1015</width>
+    <height>694</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AppUI</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="mainWidget">
+   <property name="minimumSize">
+    <size>
+     <width>1015</width>
+     <height>673</height>
+    </size>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="statementLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item>
+       <widget class="QLabel" name="equation">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>26</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;y'(x) = 3y - xy&lt;/span&gt;&lt;span style=&quot; font-size:20pt; vertical-align:super;&quot;&gt;1/3&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;y(x&lt;/span&gt;&lt;span style=&quot; font-size:20pt; vertical-align:sub;&quot;&gt;0&lt;/span&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;) = y&lt;/span&gt;&lt;span style=&quot; font-size:20pt; vertical-align:sub;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;x ∈ (x&lt;/span&gt;&lt;span style=&quot; font-size:20pt; vertical-align:sub;&quot;&gt;0&lt;/span&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;, X)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::RichText</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QFormLayout" name="inputLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMaximumSize</enum>
+        </property>
+        <property name="fieldGrowthPolicy">
+         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+        </property>
+        <property name="rowWrapPolicy">
+         <enum>QFormLayout::DontWrapRows</enum>
+        </property>
+        <property name="labelAlignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+        <property name="formAlignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+        <property name="horizontalSpacing">
+         <number>0</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <item row="0" column="1">
+         <widget class="QDoubleSpinBox" name="y0Input">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimum">
+           <double>-1000.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>1000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="x0">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;x&lt;/span&gt;&lt;span style=&quot; font-size:16pt; vertical-align:sub;&quot;&gt;0&lt;/span&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt; = &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::RichText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <property name="indent">
+           <number>-2</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QDoubleSpinBox" name="x0Input">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimum">
+           <double>-1000.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>1000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="X">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;X = &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::RichText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="indent">
+           <number>-1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QDoubleSpinBox" name="XInput">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimum">
+           <double>-1000.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>1000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="Line" name="line">
+          <property name="windowModality">
+           <enum>Qt::NonModal</enum>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="N">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>N = </string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::RichText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QDoubleSpinBox" name="NInput">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="suffix">
+           <string/>
+          </property>
+          <property name="decimals">
+           <number>0</number>
+          </property>
+          <property name="minimum">
+           <double>1.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="h">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>h = </string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="StepLabel" name="hValue">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>undefined</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::RichText</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="y0">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;y&lt;span style=&quot; vertical-align:sub;&quot;&gt;0&lt;/span&gt; =&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::RichText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="indent">
+           <number>-7</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <layout class="QVBoxLayout" name="chartLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item>
+       <widget class="QTabWidget" name="charts">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="solution">
+         <attribute name="title">
+          <string>Solution</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="SolutionChartView" name="solutionChartView">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="LTE">
+         <attribute name="title">
+          <string>LTE</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="LTEChartView" name="lteChartView"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="GTE">
+         <attribute name="title">
+          <string>GTE</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="GTEChartView" name="gteChartView"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="togglers">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetNoConstraint</enum>
+        </property>
+        <item>
+         <widget class="QCheckBox" name="showExact">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Exact</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="showEuler">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Euler</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="showHeun">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Heun</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="showRungeKutta">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Runge-Kutta</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>50%</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="zoomer">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimum">
+           <number>50</number>
+          </property>
+          <property name="maximum">
+           <number>150</number>
+          </property>
+          <property name="singleStep">
+           <number>10</number>
+          </property>
+          <property name="pageStep">
+           <number>10</number>
+          </property>
+          <property name="sliderPosition">
+           <number>100</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="invertedControls">
+           <bool>false</bool>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksAbove</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>150%</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="InputParser" name="statusBar"/>
+  <action name="actionFile">
+   <property name="text">
+    <string>File...</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SolutionChartView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">widgets/solution/view/SolutionChartView.h</header>
+   <slots>
+    <slot>onInputUpdate(double,double,double,int)</slot>
+    <slot>toggleExact(int)</slot>
+    <slot>toggleEuler(int)</slot>
+    <slot>toggleHeun(int)</slot>
+    <slot>toggleRungeKutta(int)</slot>
+    <slot>onZoom(int)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>InputParser</class>
+   <extends>QStatusBar</extends>
+   <header location="global">parser/InputParser.h</header>
+   <slots>
+    <signal>setLineSeries(double,double,double,int)</signal>
+    <slot>onx0Change(double)</slot>
+    <slot>ony0Change(double)</slot>
+    <slot>onXChange(double)</slot>
+    <slot>onNChange(double)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>StepLabel</class>
+   <extends>QLabel</extends>
+   <header location="global">widgets/step/StepLabel.h</header>
+   <slots>
+    <slot>setx0(double)</slot>
+    <slot>setX(double)</slot>
+    <slot>setN(double)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>LTEChartView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">widgets/LTE/view/LTEChartView.h</header>
+   <slots>
+    <signal>showWarning()</signal>
+    <slot>onInputUpdate(double,double,double,int)</slot>
+    <slot>toggleEulerLTE(int)</slot>
+    <slot>toggleHeunLTE(int)</slot>
+    <slot>toggleRungeKuttaLTE(int)</slot>
+    <slot>onZoom(int)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>GTEChartView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">widgets/GTE/view/GTEChartView.h</header>
+   <slots>
+    <slot>onInputUpdate(double,double,double,int)</slot>
+    <slot>toggleEulerGTE(int)</slot>
+    <slot>toggleHeunGTE(int)</slot>
+    <slot>toggleRungeKuttaGTE(int)</slot>
+    <slot>onZoom(int)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>y0Input</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>statusBar</receiver>
+   <slot>ony0Change(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>194</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>686</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>XInput</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>statusBar</receiver>
+   <slot>onXChange(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>194</x>
+     <y>349</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>156</x>
+     <y>678</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>x0Input</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>statusBar</receiver>
+   <slot>onx0Change(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>114</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>55</x>
+     <y>679</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>NInput</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>statusBar</receiver>
+   <slot>onNChange(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>194</x>
+     <y>380</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>177</x>
+     <y>675</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>statusBar</sender>
+   <signal>setLineSeries(double,double,double,int)</signal>
+   <receiver>solutionChartView</receiver>
+   <slot>onInputUpdate(double,double,double,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>474</x>
+     <y>673</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>466</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>x0Input</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>hValue</receiver>
+   <slot>setx0(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>183</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>194</x>
+     <y>408</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>XInput</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>hValue</receiver>
+   <slot>setX(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>194</x>
+     <y>349</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>194</x>
+     <y>408</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>NInput</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>hValue</receiver>
+   <slot>setN(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>157</x>
+     <y>380</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>194</x>
+     <y>408</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>statusBar</sender>
+   <signal>setLineSeries(double,double,double,int)</signal>
+   <receiver>lteChartView</receiver>
+   <slot>onInputUpdate(double,double,double,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>383</x>
+     <y>684</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>366</x>
+     <y>337</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showExact</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>solutionChartView</receiver>
+   <slot>toggleExact(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>627</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>293</x>
+     <y>469</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showEuler</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>solutionChartView</receiver>
+   <slot>toggleEuler(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>401</x>
+     <y>647</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>429</x>
+     <y>470</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showHeun</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>solutionChartView</receiver>
+   <slot>toggleHeun(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>604</x>
+     <y>623</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>607</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showRungeKutta</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>solutionChartView</receiver>
+   <slot>toggleRungeKutta(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>718</x>
+     <y>644</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>709</x>
+     <y>595</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomer</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>solutionChartView</receiver>
+   <slot>onZoom(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>881</x>
+     <y>642</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>832</x>
+     <y>514</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showEuler</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>lteChartView</receiver>
+   <slot>toggleEulerLTE(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>433</x>
+     <y>640</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>415</x>
+     <y>472</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showHeun</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>lteChartView</receiver>
+   <slot>toggleHeunLTE(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>645</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>558</x>
+     <y>501</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showRungeKutta</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>lteChartView</receiver>
+   <slot>toggleRungeKuttaLTE(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>690</x>
+     <y>634</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>703</x>
+     <y>556</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomer</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lteChartView</receiver>
+   <slot>onZoom(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>867</x>
+     <y>640</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>863</x>
+     <y>535</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showEuler</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>gteChartView</receiver>
+   <slot>toggleEulerGTE(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>433</x>
+     <y>636</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>432</x>
+     <y>384</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showHeun</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>gteChartView</receiver>
+   <slot>toggleHeunGTE(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>570</x>
+     <y>646</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>547</x>
+     <y>475</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showRungeKutta</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>gteChartView</receiver>
+   <slot>toggleRungeKuttaGTE(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>735</x>
+     <y>643</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>705</x>
+     <y>511</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomer</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>gteChartView</receiver>
+   <slot>onZoom(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>900</x>
+     <y>640</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>859</x>
+     <y>424</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>statusBar</sender>
+   <signal>setLineSeries(double,double,double,int)</signal>
+   <receiver>gteChartView</receiver>
+   <slot>onInputUpdate(double,double,double,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>240</x>
+     <y>681</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>530</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
