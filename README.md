@@ -1,1 +1,1 @@
-# plotter
+# Graph Plotter for Numerical Methods
